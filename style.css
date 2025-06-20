@@ -21,10 +21,10 @@ a {
 .header {
   background: #fff;
   color: #000;
+  padding: 20px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
   flex-wrap: wrap;
   border-bottom: 2px solid #ccc;
 }
@@ -47,9 +47,8 @@ a {
 
 .nav {
   display: flex;
+  gap: 15px;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 10px;
 }
 
 .nav-link {
@@ -63,7 +62,7 @@ a {
 }
 
 .nav-link.btn {
-  padding: 8px 18px;
+  padding: 8px 16px;
   border-radius: 25px;
   background: #0077ff;
   color: #fff;
@@ -74,8 +73,28 @@ a {
   box-shadow: 0 0 10px rgba(0, 119, 255, 0.5);
 }
 
-.nav-link.btn:hover {
-  background: #0051b3;
+/* CABEÇALHO MOBILE */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .nav {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-link.btn,
+  .nav-link.btn.highlight {
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+  }
 }
 
 /* HERO */
